@@ -121,8 +121,6 @@ sshd_config
 	else
 		/etc/init.d/ssh reload > /dev/null
 	fi
-fi
-then
 sshd_config(){ echo "# © TwoSSH | 2018 All rights reserved
 #
 Port 22
