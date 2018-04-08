@@ -103,7 +103,7 @@ sshd_config
 	chmod +x /bin/ajuda
 	wget https://raw.githubusercontent.com/twossh/vpsmanager/master/scripts/sshmonitor2.sh -O /bin/sshmonitor
 	chmod +x /bin/sshmonitor
-    wget https://raw.githubusercontent.com/twossh/vpsmanager/master/scripts/badvpnsetup.sh -O /bin/badvpnsetup
+    wget https://raw.githubusercontent.com/twossh/vpsmanager/master/scripts/badvpnsetup2.sh -O /bin/badvpnsetup
 	chmod +x /bin/badvpnsetup
     wget https://raw.githubusercontent.com/twossh/vpsmanager/master/scripts/tcptweaker.sh -O /bin/tcptweaker
 	chmod +x /bin/tcptweaker
@@ -115,6 +115,8 @@ sshd_config
 	chmod +x /bin/otimizar
     wget https://raw.githubusercontent.com/twossh/vpsmanager/master/scripts/speedtest.sh -O /bin/speedtest
 	chmod +x /bin/speedtest
+	wget https://raw.githubusercontent.com/twossh/vpsmanager/master/scripts/speedtest.py -O /bin/speedtest.py
+	chmod +x /bin/speedtest.py
     wget https://raw.githubusercontent.com/twossh/vpsmanager/master/scripts/detalhes.sh -O /bin/detalhes
 	chmod +x /bin/detalhes
 	if [ ! -f "/etc/init.d/ssh" ]
@@ -186,7 +188,7 @@ sshd_config
 	chmod +x /bin/ajuda
 	wget https://raw.githubusercontent.com/twossh/vpsmanager/master/scripts/sshmonitor2.sh -O /bin/sshmonitor
 	chmod +x /bin/sshmonitor
-    wget https://raw.githubusercontent.com/twossh/vpsmanager/master/scripts/badvpnsetup.sh -O /bin/badvpnsetup
+    wget https://raw.githubusercontent.com/twossh/vpsmanager/master/scripts/badvpnsetup2.sh -O /bin/badvpnsetup
 	chmod +x /bin/badvpnsetup
     wget https://raw.githubusercontent.com/twossh/vpsmanager/master/scripts/tcptweaker.sh -O /bin/tcptweaker
 	chmod +x /bin/tcptweaker
@@ -198,6 +200,8 @@ sshd_config
 	chmod +x /bin/otimizar
     wget https://raw.githubusercontent.com/twossh/vpsmanager/master/scripts/speedtest.sh -O /bin/speedtest
 	chmod +x /bin/speedtest
+	wget https://raw.githubusercontent.com/twossh/vpsmanager/master/scripts/speedtest.py -O /bin/speedtest.py
+	chmod +x /bin/speedtest.py
     wget https://raw.githubusercontent.com/twossh/vpsmanager/master/scripts/detalhes.sh -O /bin/detalhes
 	chmod +x /bin/detalhes
 	if [ ! -f "/etc/init.d/ssh" ]
