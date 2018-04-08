@@ -18,37 +18,6 @@ rosa=proxy8080.py
 preto=proxy8799.py
 azul=proxy3128.py
 
-sshd_config(){ echo "# © TwoVPS | 2018 All rights reserved
-#
-Port 22
-Port 443
-Port 144
-Protocol 2
-KeyRegenerationInterval 3600
-ServerKeyBits 1024
-SyslogFacility AUTH
-LogLevel INFO
-LoginGraceTime 120
-PermitRootLogin yes
-StrictModes yes
-RSAAuthentication yes
-PubkeyAuthentication yes
-IgnoreRhosts yes
-RhostsRSAAuthentication no
-HostbasedAuthentication no
-PermitEmptyPasswords no
-ChallengeResponseAuthentication no
-PasswordAuthentication yes
-X11Forwarding yes
-X11DisplayOffset 10
-PrintMotd no
-PrintLastLog yes
-TCPKeepAlive yes
-#UseLogin no
-AcceptEnv LANG LC_*
-Subsystem sftp /usr/lib/openssh/sftp-server
-UsePAM yes" > /etc/ssh/sshd_config
-}
 
 if [ -e "$abobora$verde" ] ; then
 echo -e "\033[1;32mPort 80 OK √ \033[0m"
@@ -118,8 +87,6 @@ read -p "[s/n]: " -e -i s port3128
 
 service squid3 stop > /dev/null 2> /dev/null
 service squid stop > /dev/null 2> /dev/null
-service ssh restart > /dev/null 2> /dev/null
-service sshd restart > /dev/null 2> /dev/null
 
 if [[ "$port80" = 's' ]]; then
 chmod a+x proxy80.py && nohup python proxy80.py > proxy80.txt &
