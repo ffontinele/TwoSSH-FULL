@@ -21,8 +21,8 @@ azul=proxy3128.py
 sshd_config(){ echo "# © TwoVPS | 2018 All rights reserved
 #
 Port 22
-Port 144
 Port 443
+Port 144
 Protocol 2
 KeyRegenerationInterval 3600
 ServerKeyBits 1024
@@ -122,7 +122,7 @@ service ssh restart > /dev/null 2> /dev/null
 service sshd restart > /dev/null 2> /dev/null
 
 if [[ "$port80" = 's' ]]; then
-chmod a+x proxy.py && nohup python proxy80.py > proxy80.txt &
+chmod a+x proxy80.py && nohup python proxy80.py > proxy80.txt &
 fi
 
 if [[ "$port8080" = 's' ]]; then
