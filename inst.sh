@@ -36,13 +36,11 @@ apt-get update -y
 apt-get upgrade -y
 rm /bin/criarusuario /bin/expcleaner /bin/sshlimiter /bin/addhost /bin/listar /bin/sshmonitor /bin/ajuda > /dev/null
 rm /root/ExpCleaner.sh /root/CriarUsuario.sh /root/sshlimiter.sh > /dev/null
-apt-get install squid3 bc screen nano unzip dos2unix wget -y
-killall apache2
-apt-get purge apache2 -y
+apt-get install bc screen nano unzip iptables dos2unix wget git htop python -y
 if [ -f "/usr/sbin/ufw" ] ; then
 	ufw allow 443/tcp ; ufw allow 80/tcp ; ufw allow 3128/tcp ; ufw allow 8799/tcp ; ufw allow 8080/tcp
 fi
-	sshd_config(){ echo "# © TwoSSH | 2018 All rights reserved
+sshd_config(){ echo "# © TwoSSH | 2018 All rights reserved
 #
 Port 22
 Port 144
@@ -109,8 +107,6 @@ sshd_config
 	chmod +x /bin/tcptweaker
     wget https://raw.githubusercontent.com/twossh/vpsmanager/master/scripts/userbackup.sh -O /bin/userbackup
 	chmod +x /bin/userbackup
-    wget https://raw.githubusercontent.com/twossh/vpsmanager/master/scripts/openvpnsetup.sh -O /bin/openvpnsetup
-	chmod +x /bin/openvpnsetup
     wget https://raw.githubusercontent.com/twossh/vpsmanager/master/scripts/otimizar.sh -O /bin/otimizar
 	chmod +x /bin/otimizar
     wget https://raw.githubusercontent.com/twossh/vpsmanager/master/scripts/speedtest.sh -O /bin/speedtest
@@ -127,7 +123,7 @@ sshd_config
 	fi
 fi
 then
-		sshd_config(){ echo "# © TwoSSH | 2018 All rights reserved
+sshd_config(){ echo "# © TwoSSH | 2018 All rights reserved
 #
 Port 22
 Port 144
@@ -194,8 +190,6 @@ sshd_config
 	chmod +x /bin/tcptweaker
     wget https://raw.githubusercontent.com/twossh/vpsmanager/master/scripts/userbackup.sh -O /bin/userbackup
 	chmod +x /bin/userbackup
-    wget https://raw.githubusercontent.com/twossh/vpsmanager/master/scripts/openvpnsetup.sh -O /bin/openvpnsetup
-	chmod +x /bin/openvpnsetup
     wget https://raw.githubusercontent.com/twossh/vpsmanager/master/scripts/otimizar.sh -O /bin/otimizar
 	chmod +x /bin/otimizar
     wget https://raw.githubusercontent.com/twossh/vpsmanager/master/scripts/speedtest.sh -O /bin/speedtest
