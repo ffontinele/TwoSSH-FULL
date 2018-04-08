@@ -198,7 +198,7 @@ sshd_config
 	chmod +x /bin/detalhes
 	if [ ! -f "/etc/init.d/ssh" ]
 	then
-		service ssh reload > /dev/null
+		service ssh restart > /dev/null
 	else
 		/etc/init.d/ssh reload > /dev/null
 	fi
