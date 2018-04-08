@@ -46,9 +46,6 @@ wget https://raw.githubusercontent.com/twossh/fullpython/master/proxy8799.py > /
 history -c
 fi
 
-sshd_config
-
-
 if [ -e "$abobora$azul" ] ; then
 echo -e "\033[1;32mPort 3128 OK √ \033[0m"
 history -c
