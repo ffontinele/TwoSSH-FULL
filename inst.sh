@@ -1,4 +1,5 @@
 #!/bin/bash
+clear
 tput setaf 7 ; tput setab 4 ; tput bold ; printf '%35s%s%-20s\n' "TwoSSH Script - FULL" ; tput sgr0
 tput setaf 3 ; tput bold ; echo "" ; echo "Este script irá:" ; echo ""
 echo "● Instalar e configurar o proxy socks nas portas 80, 3128, 8080 e 8799" ; echo "  para permitir conexões SSH para este servidor"
@@ -121,87 +122,7 @@ sshd_config
 	else
 		/etc/init.d/ssh reload > /dev/null
 	fi
-sshd_config(){ echo "# © TwoSSH | 2018 All rights reserved
-#
-Port 22
-Port 144
-Port 443 
-Protocol 2 
-KeyRegenerationInterval 3600 
-ServerKeyBits 1024 
-SyslogFacility AUTH 
-LogLevel INFO 
-LoginGraceTime 120 
-PermitRootLogin yes 
-StrictModes yes 
-RSAAuthentication yes 
-PubkeyAuthentication yes 
-IgnoreRhosts yes 
-RhostsRSAAuthentication no 
-HostbasedAuthentication no 
-PermitEmptyPasswords no 
-ChallengeResponseAuthentication no 
-PasswordAuthentication yes 
-X11Forwarding yes 
-X11DisplayOffset 10 
-PrintMotd no 
-PrintLastLog yes 
-TCPKeepAlive yes 
-#UseLogin no 
-AcceptEnv LANG LC_* 
-Subsystem sftp /usr/lib/openssh/sftp-server 
-UsePAM yes" > /etc/ssh/sshd_config
-}
-
-sshd_config
-	wget https://raw.githubusercontent.com/twossh/vpsmanager/master/scripts/banner.sh -O /bin/banner
-	chmod +x /bin/banner
-	wget https://raw.githubusercontent.com/twossh/vpsmanager/master/scripts/firewall.sh -O /bin/firewall
-	chmod +x /bin/firewall
-	wget https://raw.githubusercontent.com/twossh/vpsmanager/master/scripts/firewall2.sh -O /bin/firewall2
-	chmod +x /bin/firewall2
-	wget https://raw.githubusercontent.com/twossh/vpsmanager/master/scripts/torrent.sh -O /bin/torrent
-	chmod +x /bin/torrent
-	wget https://raw.githubusercontent.com/twossh/vpsmanager/master/scripts/alterarsenha.sh -O /bin/alterarsenha
-	chmod +x /bin/alterarsenha
-	wget https://raw.githubusercontent.com/twossh/vpsmanager/master/scripts/criarusuario2.sh -O /bin/criarusuario
-	chmod +x /bin/criarusuario
-	wget https://raw.githubusercontent.com/twossh/TwoSSH-FULL/master/scripts/socks -O /bin/socks
-	chmod +x /bin/socks
-	wget https://raw.githubusercontent.com/twossh/vpsmanager/master/scripts/expcleaner2.sh -O /bin/expcleaner
-	chmod +x /bin/expcleaner
-	wget https://raw.githubusercontent.com/twossh/vpsmanager/master/scripts/mudardata.sh -O /bin/mudardata
-	chmod +x /bin/mudardata
-	wget https://raw.githubusercontent.com/twossh/vpsmanager/master/scripts/remover.sh -O /bin/remover
-	chmod +x /bin/remover
-	wget https://raw.githubusercontent.com/twossh/vpsmanager/master/scripts/sshlimiter2.sh -O /bin/sshlimiter
-	chmod +x /bin/sshlimiter
-	wget https://raw.githubusercontent.com/twossh/vpsmanager/master/scripts/alterarlimite.sh -O /bin/alterarlimite
-	chmod +x /bin/alterarlimite
-	wget https://raw.githubusercontent.com/twossh/TwoSSH-FULL/master/scripts/ajuda.sh -O /bin/ajuda
-	chmod +x /bin/ajuda
-	wget https://raw.githubusercontent.com/twossh/vpsmanager/master/scripts/sshmonitor2.sh -O /bin/sshmonitor
-	chmod +x /bin/sshmonitor
-    wget https://raw.githubusercontent.com/twossh/vpsmanager/master/scripts/badvpnsetup2.sh -O /bin/badvpnsetup
-	chmod +x /bin/badvpnsetup
-    wget https://raw.githubusercontent.com/twossh/vpsmanager/master/scripts/tcptweaker.sh -O /bin/tcptweaker
-	chmod +x /bin/tcptweaker
-    wget https://raw.githubusercontent.com/twossh/vpsmanager/master/scripts/userbackup.sh -O /bin/userbackup
-	chmod +x /bin/userbackup
-    wget https://raw.githubusercontent.com/twossh/vpsmanager/master/scripts/otimizar.sh -O /bin/otimizar
-	chmod +x /bin/otimizar
-    wget https://raw.githubusercontent.com/twossh/vpsmanager/master/scripts/speedtest.sh -O /bin/speedtest
-	chmod +x /bin/speedtest
-	wget https://raw.githubusercontent.com/twossh/vpsmanager/master/scripts/speedtest.py -O /bin/speedtest.py
-	chmod +x /bin/speedtest.py
-    wget https://raw.githubusercontent.com/twossh/vpsmanager/master/scripts/detalhes.sh -O /bin/detalhes
-	chmod +x /bin/detalhes
-	if [ ! -f "/etc/init.d/ssh" ]
-	then
-		service ssh restart > /dev/null
-	else
-		/etc/init.d/ssh reload > /dev/null
-	fi
+clear
 echo ""
 tput setaf 7 ; tput setab 4 ; tput bold ; echo "Proxy Socks Instalado e rodando nas portas: 80, 3128, 8080 e 8799" ; tput sgr0
 tput setaf 7 ; tput setab 4 ; tput bold ; echo "OpenSSH rodando nas portas 22, 144 e 443" ; tput sgr0
