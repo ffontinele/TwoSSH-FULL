@@ -54,6 +54,8 @@ banner_config
 	chmod +x /bin/firewall2
 	wget https://raw.githubusercontent.com/twossh/vpsmanager/master/scripts/torrent.sh -O /bin/torrent
 	chmod +x /bin/torrent
+	wget https://raw.githubusercontent.com/twossh/vpsmanager/master/scripts/openvpn.sh -O /bin/openvpn
+	chmod +x /bin/openvpn
 	wget https://raw.githubusercontent.com/twossh/vpsmanager/master/scripts/alterarsenha.sh -O /bin/alterarsenha
 	chmod +x /bin/alterarsenha
 	wget https://raw.githubusercontent.com/twossh/vpsmanager/master/scripts/criarusuario2.sh -O /bin/criarusuario
