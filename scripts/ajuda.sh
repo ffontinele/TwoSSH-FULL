@@ -12,8 +12,6 @@ tput setaf 2 ; tput bold ; printf '%s' "mudardata " ; tput setaf 7 ; printf '%s'
 tput sgr0
 tput setaf 2 ; tput bold ; printf '%s' "socks " ; tput setaf 7 ; printf '%s' "- " ; tput setaf 3 ; echo "Ativa o proxy Socks5 nas portas 80, 8080, 3128, 8799" ; echo ""
 tput sgr0
-tput setaf 2 ; tput bold ; printf '%s' "openvpn " ; tput setaf 7 ; printf '%s' "- " ; tput setaf 3 ; echo "Instala o sistema openvpn na operadora VIVO" ; echo ""
-tput sgr0
 tput setaf 2 ; tput bold ; printf '%s' "remover " ; tput setaf 7 ; printf '%s' "- " ; tput setaf 3 ; echo "Remover um usuário SSH" ; echo ""
 tput sgr0
 tput setaf 2 ; tput bold ; printf '%s' "userbackup " ; tput setaf 7 ; printf '%s' "- " ; tput setaf 3 ; echo "Cria uma cópia de todos os usuários e senhas" ; echo ""
